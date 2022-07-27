@@ -1,0 +1,35 @@
+.row {
+    color: #fff;
+    margin-left: 20px;
+  }
+  
+  .row_posters {  /*makes a container to display movies in a single row*/
+    display: flex; 
+    overflow-y: hidden;
+    overflow-x: scroll;  /*enables scrolling feature*/
+    padding: 20px;   /*when poster zooms out does not crops */
+  }
+  
+  .row_posters::-webkit-scrollbar {
+    display: none;   /*hides scrollbar*/
+  }
+  
+  .row_poster {
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;  /*height of posters */
+    margin-right: 10px; /* gives margin btween movies */
+    transition: transform 450ms;
+  }
+  
+  .row_poster:hover {
+    transform: scale(1.1);
+  }
+  
+  .row_posterLarge {
+    max-height: 250px;
+  }
+  
+  .row_posterLarge:hover {
+    transform: scale(1.11);
+  }
